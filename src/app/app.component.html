@@ -1,0 +1,24 @@
+<h1>Персональная страница</h1>
+
+<h3>
+  <p>Меня зовут: {{name}}</p>
+  <p>Стоимость моих услуг: {{cost | currency}} за 1 час работы</p>
+  <p>
+    Условия: Для избежания обмана оплата по частям (за {{ready | percent}}
+    работы — первая половина, за остальное — 2-ая)
+  </p>
+</h3>
+
+<p *ngIf="condition">Здарова!</p> <!-- С 10 до 17 часов будет торчать надпись "Здарова!" -->
+
+<ul>
+  <li *ngFor="let item of phoneNumbers">{{item}}</li>
+</ul>
+
+<!--  -->
+<div [ngSwitch]="countTEST">
+  <ng-template ngSwitchCase="1">{{countTEST * 10}}</ng-template>
+  <ng-template ngSwitchCase="2">{{countTEST * 100}}</ng-template>
+  <ng-template ngSwitchDefault>{{countTEST * 1000}}</ng-template>
+</div>
+<!--  -->
